@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 100%;
 }
 :root {
   --bg-main-color: #edf2ec;
@@ -41,6 +40,7 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
+  font-size: 1.5rem;
 }
 
 header, main, footer {
@@ -54,7 +54,4 @@ header, main, footer {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-.footer__link{
-  font-size: 1.5rem;
 }
