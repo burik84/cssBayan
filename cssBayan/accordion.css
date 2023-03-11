@@ -1,0 +1,54 @@
+:root {
+  --bg-border-color: #2d5faf;
+  --text-color: #739ad8;
+}
+.accordion,
+.accordion * {
+  font-family: arial, sans-serif;
+}
+.accordion {
+  width: 100%;
+}
+
+.accordion input {
+  display: none;
+}
+
+.accordion label {
+  display: block;
+  width: 100%;
+  padding: 1em 0;
+  font-weight: 700;
+  color: var(--text-color);
+  border-top: 1px solid var(--bg-border-color);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.accordion__content {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  font-size: 0.75rem;
+  transition: all 0.5s ease;
+}
+.accordion__content p {
+  padding: 1em 0;
+}
+
+.accordion input:checked ~ .accordion__content {
+  opacity: 1;
+  height: max-content;
+  font-size: 1rem;
+}
+
+/* .accordion label::after {
+  display: block;
+  content: '+';
+  font-weight: bold;
+  transition: all 0.4s;
+}
+
+.accordion input:checked ~ label::after {
+  content: '-';
+  font-weight: bold;
+} */

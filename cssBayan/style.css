@@ -37,21 +37,35 @@ img {
 body {
   background-color: var(--bg-main-color);
   font-family: 'Inter', Arial, Helvetica, sans-serif;
-  min-height: 100vh;
+  /* min-height: calc(100vh - 4rem); */
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   font-size: 1.5rem;
 }
 
-header, main, footer {
+.header,
+.main,
+.footer {
   width: 100%;
-  max-width: 1220px;
-  margin: 0 auto;
-}
-
-.footer__container {
+  margin: 2rem auto 1rem;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+}
+.container {
+  width: 800px;
+  display: flex;
   flex-wrap: wrap;
+}
+.main {
+  height: calc(100vh - 14rem);
+}
+.main .container {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.footer {
+  margin-bottom: 0;
+}
+.footer .container {
   justify-content: space-between;
 }
