@@ -19,7 +19,19 @@
 }
 /* media */
 @media (max-width: 870px) {
+  html {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 380px) {
+  html {
+    font-size: 12px;
+  }
+  .footer .container {
+    justify-content: center;
+  }
+  .footer__link:first-of-type{
+    margin-bottom: 1rem;
+  }
 }

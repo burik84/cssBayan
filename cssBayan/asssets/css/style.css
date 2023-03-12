@@ -54,6 +54,7 @@ body {
 }
 .container {
   width: 800px;
+  margin: 0 1rem;
   display: flex;
   flex-wrap: wrap;
 }
