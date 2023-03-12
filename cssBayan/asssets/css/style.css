@@ -25,8 +25,9 @@ select {
   font: inherit;
 }
 
-button {
+button, button:active, button:hover {
   border: none;
+  outline-color: transparent;
 }
 
 img {
