@@ -9,9 +9,7 @@
     color: var(--hover-color);
   }
   .accordion:hover .accordion__content {
-    opacity: 1;
-    height: max-content;
-    font-size: 1rem;
+    animation: show 0.5s forwards;
   }
   .accordion:hover input:not(:checked) ~ .title .icon::before {
     content: '\f00d';
@@ -33,5 +31,26 @@
   }
   .footer__link:first-of-type{
     margin-bottom: 1rem;
+  }
+}
+
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+
+  25%{
+    opacity: 0;
+    height: 50%;
+  }
+  50%{
+    opacity: 0.5;
+    height: max-content;
+  }
+  100% {
+    opacity: 1;
+    height: max-content;
   }
 }
