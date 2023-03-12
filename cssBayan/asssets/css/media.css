@@ -1,10 +1,11 @@
 :root {
   --hover-color: #222d3f;
-  --hover-checked-color: #739ad8;
 }
+
 @media (hover: hover) {
   /* when hover is supported */
-  .container:hover .accordion:not(:focus) label {
+  .container:hover .accordion:not(:focus) label,
+  .container:hover .accordion:not(:focus) .icon::before {
     color: var(--hover-color);
   }
   .accordion:hover .accordion__content {
@@ -12,8 +13,8 @@
     height: max-content;
     font-size: 1rem;
   }
-  .container:hover .accordion:active input ~ label {
-    color: var(--cover-focus);
+  .accordion:hover input:not(:checked) ~ .title .icon::before {
+    content: '\f00d';
   }
 }
 /* media */
