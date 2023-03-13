@@ -1,0 +1,56 @@
+:root {
+  --hover-color: #222d3f;
+}
+
+@media (hover: hover) {
+  /* when hover is supported */
+  .container:hover .accordion:not(:focus) label,
+  .container:hover .accordion:not(:focus) .icon::before {
+    color: var(--hover-color);
+  }
+  .accordion:hover .accordion__content {
+    animation: show 0.5s forwards;
+  }
+  .accordion:hover input:not(:checked) ~ .title .icon::before {
+    content: '\f00d';
+  }
+}
+/* media */
+@media (max-width: 870px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  html {
+    font-size: 12px;
+  }
+  .footer .container {
+    justify-content: center;
+  }
+  .footer__link:first-of-type{
+    margin-bottom: 1rem;
+  }
+}
+
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+
+  25%{
+    opacity: 0;
+    height: 50%;
+  }
+  50%{
+    opacity: 0.5;
+    height: max-content;
+  }
+  100% {
+    opacity: 1;
+    height: max-content;
+  }
+}
