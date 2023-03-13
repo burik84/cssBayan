@@ -59,7 +59,7 @@ body {
   flex-wrap: wrap;
 }
 .main {
-  height: calc(100vh - 14rem);
+  min-height: calc(100vh - 14rem);
 }
 .main .container {
   flex-direction: column;
